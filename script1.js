@@ -157,4 +157,64 @@ function ArraySplice()
 }
 ArraySplice();
 
+// 21.Creating a new Array with a given length
+function CreateArrayWithGivenSize(n){
+    let arr = new Array(n);
+    console.log(arr);
+}
+CreateArrayWithGivenSize(5);
+
+// 22.Implementing stack with array
+let stack = []
+function isEmptyStack(){
+    return stack.length === 0;
+}
+function pushStack(element){
+    stack.push(element);
+    return element;
+}
+function popStack(){
+    let val = stack[stack.length - 1];
+    stack.pop();
+    return val;
+}
+function peekStack(){
+    return stack[stack.length - 1];
+}
+
+// 23. creating array of array
+let nums = []
+nums.push([1,2,3,4])
+nums.push([5,6,7,8])
+nums.push([9,10,11,12])
+
+console.log(nums)
+
+// 24. implementing queue with array
+let queue = []
+function isEmptyQueue(){
+    return queue.length === 0;
+}
+function pushQueue(element){
+    queue.unshift(element);
+    return element;
+}
+function popQueue(){
+    let val = queue[0];
+    queue.pop();
+    return val;
+}
+function peekQueue(){
+    return queue[queue.length - 1];
+}
+
+// 25.Array equality
+let a = [5,6,7];
+let b = [5,6,7];
+console.log(ArrayEqual(a,b));
+function ArrayEqual(a,b){
+    return Array.isArray(a) && Array.isArray(b) && a.length==b.length && a.every((val,index) => val === b[index]);
+}
+
+  
   
